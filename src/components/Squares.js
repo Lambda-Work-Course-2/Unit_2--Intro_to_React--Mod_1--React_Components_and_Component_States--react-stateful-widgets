@@ -7,18 +7,12 @@ const [squares,setSquares] = useState(listOfSquareIds);
 const [activeSquare, setActiveSquare] = useState(null)
 
   const getClassName = id => {
-    if(id == activeSquare){  
-     return (' active')
-    }else{
-     return ('')
-  }};
+     return((id == activeSquare) ? ' active' : ' ');
+
+};
 
   const markActive = id => {
-    if (activeSquare == id ){
-     setActiveSquare(null);
-    }else{
-     setActiveSquare(id);
-    }
+     return((activeSquare == id) ? setActiveSquare(null) : setActiveSquare(id));
   };
 
   return (

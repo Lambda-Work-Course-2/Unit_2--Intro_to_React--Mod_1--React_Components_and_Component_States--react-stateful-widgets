@@ -3,13 +3,8 @@ import React, { useState } from 'react';
 export default function Spinner() {
 const [spinnerOn,setSpinnerOn] = useState(true);
   const toggleSpinner = () => {
-  if (spinnerOn == true){
-          setSpinnerOn(false);
-
-  }else{
-          setSpinnerOn(true);
-  }};
-
+     (spinnerOn == true) ? setSpinnerOn(false) : setSpinnerOn(true);
+  };
   return (
     <div className='widget-spinner container'>
       <h2>Spinner</h2>
